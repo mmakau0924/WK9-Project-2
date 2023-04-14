@@ -1,0 +1,99 @@
+﻿@page
+@model Lab9_2.Pages.BizInfo.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>BizInfoModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="BizInfoModel.BusinessName" class="control-label"></label>
+                <input asp-for="BizInfoModel.BusinessName" class="form-control" />
+                <span asp-validation-for="BizInfoModel.BusinessName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BizInfoModel.Email" class="control-label"></label>
+                <input asp-for="BizInfoModel.Email" class="form-control" />
+                <span asp-validation-for="BizInfoModel.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BizInfoModel.Phone" class="control-label"></label>
+                <input asp-for="BizInfoModel.Phone" class="form-control" />
+                <span asp-validation-for="BizInfoModel.Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BizInfoModel.Address1" class="control-label"></label>
+                <input asp-for="BizInfoModel.Address1" class="form-control" />
+                <span asp-validation-for="BizInfoModel.Address1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BizInfoModel.Address2" class="control-label"></label>
+                <input asp-for="BizInfoModel.Address2" class="form-control" />
+                <span asp-validation-for="BizInfoModel.Address2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BizInfoModel.YearsOperating" class="control-label"></label>
+                <input asp-for="BizInfoModel.YearsOperating" class="form-control" />
+                <span asp-validation-for="BizInfoModel.YearsOperating" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BizInfoModel.RegDate" class="control-label"></label>
+                <input asp-for="BizInfoModel.RegDate" class="form-control" />
+                <span asp-validation-for="BizInfoModel.RegDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BizInfoModel.CoBranches" class="control-label"></label>
+                <input asp-for="BizInfoModel.CoBranches" class="form-control" />
+                <span asp-validation-for="BizInfoModel.CoBranches" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BizInfoModel.ContactPerson" class="control-label"></label>
+                <input asp-for="BizInfoModel.ContactPerson" class="form-control" />
+                <span asp-validation-for="BizInfoModel.ContactPerson" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BizInfoModel.CompanyName" class="control-label"></label>
+                <input asp-for="BizInfoModel.CompanyName" class="form-control" />
+                <span asp-validation-for="BizInfoModel.CompanyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BizInfoModel.TempStaff" class="control-label"></label>
+                <input asp-for="BizInfoModel.TempStaff" class="form-control" />
+                <span asp-validation-for="BizInfoModel.TempStaff" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BizInfoModel.permanentStaff" class="control-label"></label>
+                <input asp-for="BizInfoModel.permanentStaff" class="form-control" />
+                <span asp-validation-for="BizInfoModel.permanentStaff" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BizInfoModel.ExecStaff" class="control-label"></label>
+                <input asp-for="BizInfoModel.ExecStaff" class="form-control" />
+                <span asp-validation-for="BizInfoModel.ExecStaff" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BizInfoModel.Comments" class="control-label"></label>
+                <input asp-for="BizInfoModel.Comments" class="form-control" />
+                <span asp-validation-for="BizInfoModel.Comments" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,114 @@
+﻿@page
+@model Lab9_2.Pages.BizInfo.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BizInfoModel[0].BusinessName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BizInfoModel[0].Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BizInfoModel[0].Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BizInfoModel[0].Address1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BizInfoModel[0].Address2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BizInfoModel[0].YearsOperating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BizInfoModel[0].RegDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BizInfoModel[0].CoBranches)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BizInfoModel[0].ContactPerson)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BizInfoModel[0].CompanyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BizInfoModel[0].TempStaff)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BizInfoModel[0].permanentStaff)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BizInfoModel[0].ExecStaff)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BizInfoModel[0].Comments)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.BizInfoModel) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BusinessName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YearsOperating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CoBranches)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactPerson)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TempStaff)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.permanentStaff)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExecStaff)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comments)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
